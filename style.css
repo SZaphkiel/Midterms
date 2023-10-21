@@ -1,0 +1,235 @@
+* -------------RESETS------------- */
+/*Resets are used for overwriting default html tag properties*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,r
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  color: #2b2b2b;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section,
+time {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+.header__container{
+    max-width: 130rem;
+    width: 100%;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+.header {
+    background: #191a1b;
+}
+.header .header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .header__wrapper .branding{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.header .header__wrapper ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header .header__wrapper .branding img {
+    height: 40px;
+    width: auto;
+}
+.header .header__wrapper .branding span{
+    width: 0.1rem;
+    height: 2rem;
+    background-color: white;
+    display: block;
+}
+.header .header__wrapper .branding .header{
+    color: #fff;
+}
+.header .header__wrapper .branding .help__link:hover{
+    text-decoration: underline;
+}
+.header .header__wrapper .navigation__buttons button{
+    margin-left: 1rem;
+    padding: 6px 22px;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, serif;
+    border-radius: 8px;
+    font-weight: 400;
+}
+.header .header__wrapper .navigation__buttons .req_btn{
+    background: #191a1b;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.header .header__wrapper .navigation__buttons .info_btn{
+    background: #4C5FD5;
+    color: #fff;
+    border: 1px solid #4C5FD5;
+}
+.header .header__wrapper .navigation__buttons .info_btn:hover{
+    background: white;
+    color: #191a1b;
+    border: #fff
+}
+.header .header__wrapper .burger__menu{
+    display: none;
+}
+.header .header__wrapper .toggle_menu {
+    display: none;
+    z-index: 999;
+}
+.header .toggle_menu span {
+    width: 3rem;
+    height: 0.2rem;
+    background-color: white;
+    display: block;
+    border-radius: 5rem;
+    transition: 0.5s ease;
+    margin-right: 2.5rem;
+  }
+  .header .toggle_menu.open span:first-child{
+    transform: rotate(225deg) translate(0,-9px);
+    transform: 0.5s ease;
+  }
+  .header .toggle_menu span:nth-child(2) {
+    margin: 0.5rem 0;
+  }
+  .header .toggle_menu.open span:nth-child(2) {
+    opacity: 0;
+    transition: 0.5s ease;  
+  }
+  .header .toggle_menu.open span:last-child{
+    transform: rotate(-225deg) translate(0,9px);
+    transform: 0.2s ease;
+  }
+  
+@media screen and (max-width:1200px) {
+    .header{
+        position: relative;
+        position: fixed ;
+        width: 100%;
+      }
+      .header .header__wrapper .navigation__buttons{
+        display: none;
+      }
+      .header .header__wrapper .burger__menu {
+        position: absolute;
+        background: pink;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        height: 100vw;
+        right: -100rem;
+        width: 80%;
+        padding: 5rem 0rem 0rem 5rem;
+        transition: 0.7s ease;
+      }
+      .header .header__wrapper .toggle_menu {
+        display: block;
+      }
+}
